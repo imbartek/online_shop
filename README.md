@@ -6,7 +6,7 @@
 	npm install
 	```
 
-2. **Run the app**
+2. **Run backend**
 
 	You can run the server by typing the following command -
 
@@ -16,7 +16,7 @@
 
 	The server will start on port 3001.
 
-## Steps to Setup the React Front end app
+3. **Run frontend**
 
 First go to the `front` folder -
 

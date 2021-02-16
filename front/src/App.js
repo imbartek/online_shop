@@ -1,9 +1,13 @@
+import React from 'react';
 import './App.css';
+import MobileMenu from './components/layout/menu';
+import Navigation from './components/layout/nav';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      Hello world
+      <Navigation />
+      <MobileMenu />
     </div>
   );
 }

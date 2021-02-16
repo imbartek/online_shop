@@ -1,0 +1,36 @@
+.mobile_menu{
+    height: 90vh;
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+}
+.mobile_menu--top{
+    display: flex;
+    justify-content: space-evenly;
+    height: 7.5vh;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+.mobile_menu--middle{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column;
+    height: 75vh;
+    padding-left: 10vw;
+}
+.mobile_menu--middle li{
+    font-size: 2.5rem;
+}
+.mobile_menu--bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.5vh;
+    padding: 0 5vw;
+}
+.mobile_menu li{
+    list-style: none;
+}

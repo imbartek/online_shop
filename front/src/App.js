@@ -1,10 +1,13 @@
+import React from 'react';
 import './App.css';
-import Navigation from './components/layout/nav/Navigation';
+import MobileMenu from './components/layout/menu';
+import Navigation from './components/layout/nav';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Navigation/>
+      <Navigation />
+      <MobileMenu />
     </div>
   );
 }

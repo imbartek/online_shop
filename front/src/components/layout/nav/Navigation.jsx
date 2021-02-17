@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import MenuBtn from '../../shared/buttons/MenuBtn';
 import styled from 'styled-components';
 
@@ -16,13 +17,15 @@ const List = styled.ul`
 
 const Navigation = () => {
     return (
-        <div>
-            <List>
-                <li><MenuBtn/></li>
-                <li>BEST ONLINE SHOP</li>
-                <li>CART</li>
-            </List>
-        </div>
+        <Router>
+            <div>
+                <List>
+                    <li><MenuBtn /></li>
+                    <li><Link to="/">BEST ONLINE SHOP</Link></li>
+                    <li>CART</li>
+                </List>
+            </div>
+        </Router>
     );
 }
 

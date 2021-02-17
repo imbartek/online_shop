@@ -49,7 +49,6 @@ const Menu = styled.div`
 const MobileMenu = ({ toggleMenu }) => {
     useEffect(()=>{
         const container = document.getElementById('open');
-        console.log(toggleMenu.isOpen);
         toggleMenu.isOpen ? container.style.left = '0' : container.style.left = '-100vw'
     })
     return (
@@ -64,7 +63,6 @@ const MobileMenu = ({ toggleMenu }) => {
                     <li><Link to="/news">News</Link></li>
                     <li><Link to="#">Collection</Link></li>
                     <li><Link to="#" className="sale">Sale</Link></li>
-                    <p>{JSON.stringify(toggleMenu)}</p>
                 </ul>
                 <div className="mobile_menu--bottom">
                     <Link to="/"><p>Home</p></Link>

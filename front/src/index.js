@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Loading from './components/layout/loading';
+
+const App = React.lazy(() => import('./App.js'));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <React.Suspense fallback={<Loading/>}>
+      <App />
+    </React.Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );

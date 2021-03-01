@@ -46,6 +46,22 @@ const Menu = styled.div`
     }
 `
 
+const MainList = styled.li`
+    width: 15%;
+
+    & a:hover{
+        background-color: #f53993;
+        color: #fff;
+    }
+
+    & a{
+        display: block;
+        height: 100%;
+        text-align: center;
+        line-height: 7vh;
+    }
+`
+
 const MobileMenu = ({ toggleMenu }) => {
     useEffect(()=>{
         const container = document.getElementById('open');
@@ -55,9 +71,9 @@ const MobileMenu = ({ toggleMenu }) => {
         <Router>
             <Menu id="open">
                 <ul className="mobile_menu--top">
-                    <li>Woman</li>
-                    <li>Man</li>
-                    <li>Kids</li>
+                    <MainList><Link to="/#">Woman</Link></MainList>
+                    <MainList><Link to="#">Man</Link></MainList>
+                    <MainList><Link to="#">Kids</Link></MainList>
                 </ul>
                 <ul className="mobile_menu--middle">
                     <li><Link to="/news">News</Link></li>

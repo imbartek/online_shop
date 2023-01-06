@@ -2,14 +2,15 @@ const express = require('express')
 const router = express.Router()
 const client = require('../../db');
 
-router.get('/users', function(res, req, next){
+router.get('/', function(req, res, next){
     const usersQuerry = 'SELECT * FROM users';
 
-    client.querry(usersQuerry, function(err, result){
+    client.query(usersQuerry, function(err, result){
         if(err){
             throw err;
         }
-        res.json(result.rows)
+        console.log(result)
+        res.json(result)
     })
 
 })

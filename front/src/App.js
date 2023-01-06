@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import MobileMenu from "./components/layout/menu";
 import Navigation from "./components/layout/nav";
 import store from './store';
+import User from "./views/User/User";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <div className="App">
         <Navigation />
         <MobileMenu />
+        <User/>
       </div>
     </Provider>
   );

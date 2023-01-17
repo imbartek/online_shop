@@ -1,2 +1,4 @@
 server/node_modules
 front/node_modules
+front/src/components/Test.jsx
+front/src/App.js

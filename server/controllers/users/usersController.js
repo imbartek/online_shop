@@ -1,6 +1,7 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 const client = require('../../db');
+
 
 router.get('/', function(req, res, next){
     const usersQuerry = 'SELECT * FROM users';

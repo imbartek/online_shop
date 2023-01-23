@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/imbartek/online_shop/issues"
   },
-  "homepage": "https://github.com/imbartek/online_shop#readme"
+  "homepage": "https://github.com/imbartek/online_shop#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
+  }
 }

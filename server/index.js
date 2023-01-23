@@ -30,6 +30,7 @@ app.use(sessionMiddleware)
 
 //controllers
 app.use('/users', require('./controllers/users/usersController.js'));
+app.use('/products', require('./controllers/products/productsController.js'));
 app.use('/session', require('./controllers/users/session.js'));
 
 //default

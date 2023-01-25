@@ -1,24 +1,15 @@
-import React, {userState, useEffect} from "react";
-import "./App.css";
-import Navigation from "./components/Navigation";
-
+import React from 'react';
+import './App.css';
+import Login from './views/Login';
 
 const App = () => {
-
-
-
-
-  return (
-
-    
-   
-      <div className="App">
-        <p>My name is Wojtek</p>
-        
-        <Navigation />
-      </div>
-    
-  );
-};
+return (
+    <div>
+        <div>
+            <Login/> 
+        </div>
+    </div>
+);
+}
 
 export default App;

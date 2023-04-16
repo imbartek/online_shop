@@ -2,7 +2,7 @@
 
 import "./login.css";
 
-const Login = () => {
+const Login = (props) => {
   return (
     <div className="main">
       <div className="sub-main">
@@ -43,7 +43,7 @@ const Login = () => {
             </div>
 
             <p className="link">
-              <a href="#">Forgot password ?</a> Or <a href="#">Sign Up </a>
+              <a href="#">Forgot password ?</a> Or <a href="#" onClick={() => props.onFormSwitch('register')}>Sign Up </a>
             </p>
           </div>
         </div>

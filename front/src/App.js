@@ -1,15 +1,8 @@
-import React from 'react';
-import './App.css';
-import Login from './views/Login';
+import React from "react";
+import Login from "./views/Login";
 
 const App = () => {
-return (
-    <div>
-        <div>
-            <Login/> 
-        </div>
-    </div>
-);
-}
+	return <Login />;
+};
 
 export default App;

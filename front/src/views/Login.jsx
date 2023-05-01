@@ -1,55 +1,53 @@
 // ZADANIE 1 KPT REACT LOGOWANIA, ABY ZAINPORTOWAC UP JSimport './App.css';
 
-import "./login.css";
+import { useState } from "react";
 
 const Login = () => {
-  return (
-    <div className="main">
-      <div className="sub-main">
-        <div>
-          <div className="imgs">
-            <div className="container-img">
-              <img
-                src={process.env.PUBLIC_URL + "/img/blob1.png"}
-                alt="profile"
-                className="profile"
-              />
-            </div>
-          </div>
-          <div>
-            <h1>Login into</h1>
-            <div className="blob">
-              <img
-                src={process.env.PUBLIC_URL + "/img/blob1.png"}
-                alt="email"
-                className="email"
-              />
-              <input type="text" placeholder="user name" className="name" />
-            </div>
-            <div className="second-input blob">
-              <img
-                src={process.env.PUBLIC_URL + "/img/blob1.png"}
-                alt="password"
-                className="email"
-              />
-              <input
-                type="passwordd"
-                placeholder="user name"
-                className="name"
-              />
-            </div>
-            <div className="login-button blob">
-              <button>Login </button>
-            </div>
+	const [hasAccount, setHasAccount] = useState(true);
 
-            <p className="link">
-              <a href="#">Forgot password ?</a> Or <a href="#">Sign Up </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className='w-full h-screen bg-backgroundColor gradient flex justify-center items-center'>
+			<div className='bg-secondary p-10 flex flex-col items-center'>
+				{hasAccount ? (
+					<>
+						<p className=' text-xl'>Sign In </p>
+						<form className='flex flex-col my-4'>
+							<div className='flex flex-col relative'>
+								<label className="absolute -translate-y-1/2 top-0 left-2 z-10 bg-secondary rounded-md text-sm">Email</label>
+								<input className='border-2 border-primary p-2 relative' />
+							</div>
+							<div className='flex flex-col my-5 relative'>
+								<label className="absolute -translate-y-1/2 top-0 left-2 z-10 bg-secondary rounded-md text-sm">Password</label>
+								<input className='border-2 border-primary p-2' />
+							</div>
+							<button className='bg-primary p-2'>Login</button>
+              <p className="mt-3">Don't have an account? <span className="font-bold cursor-pointer hover:text-primary" onClick={() => setHasAccount(false)}>Sign up</span></p>
+						</form>
+					</>
+				) : (
+					<>
+						<p className=' text-xl'>Join Us!</p>
+						<form className='flex flex-col my-4'>
+							<div className='flex flex-col relative'>
+								<label className="absolute -translate-y-1/2 top-0 left-2 z-10 bg-secondary rounded-md text-sm">Email address</label>
+								<input className='border-2 border-primary p-2' />
+							</div>
+							<div className='flex flex-col relative my-4'>
+								<label className="absolute -translate-y-1/2 top-0 left-2 z-10 bg-secondary rounded-md text-sm">Password</label>
+								<input className='border-2 border-primary p-2' />
+							</div>
+              <div className='flex flex-col relative'>
+								<label className="absolute -translate-y-1/2 top-0 left-2 z-10 bg-secondary rounded-md text-sm">Password</label>
+								<input className='border-2 border-primary p-2' />
+							</div>
+							<button className='bg-primary p-2 mt-3'>Register</button>
+              <p className="mt-3">You have an account? <span className="font-bold cursor-pointer hover:text-primary" onClick={() => setHasAccount(true)}>Sign in</span></p>
+						</form>
+					</>
+				)}
+			</div>
+		</div>
+	);
 };
 
 export default Login;

@@ -50,7 +50,7 @@ const Login = () => {
 									className='border-2 border-primary p-2 relative'
 								/>
 								{errors.email && (
-									<p role='alert' className='text-[red] text-sm md:text-base'>
+									<p role='alert' className='text-[red] text-sm md:text-sm'>
 										{errors.email?.message}
 									</p>
 								)}
@@ -77,7 +77,7 @@ const Login = () => {
 									className='border-2 border-primary p-2'
 								/>
 								{errors.password && (
-									<p role='alert' className='text-[red] text-sm md:text-base'>
+									<p role='alert' className='text-[red] text-sm md:text-sm max-w-sm'>
 										{errors.password?.message}
 									</p>
 								)}
@@ -118,7 +118,7 @@ const Login = () => {
 									className='border-2 border-primary p-2'
 								/>
 								{errors.name && (
-									<p role='alert' className='text-[red] text-sm md:text-base'>
+									<p role='alert' className='text-[red] text-sm md:text-sm'>
 										{errors.name?.message}
 									</p>
 								)}
@@ -135,7 +135,7 @@ const Login = () => {
 									className='border-2 border-primary p-2'
 								/>
 								{errors.lastname && (
-									<p role='alert' className='text-[red] text-sm md:text-base'>
+									<p role='alert' className='text-[red] text-sm md:text-sm'>
 										{errors.lastname?.message}
 									</p>
 								)}
@@ -156,7 +156,7 @@ const Login = () => {
 									className='border-2 border-primary p-2'
 								/>
 								{errors.phone && (
-									<p role='alert' className='text-[red] text-sm md:text-base'>
+									<p role='alert' className='text-[red] text-sm md:text-sm'>
 										{errors.phone?.message}
 									</p>
 								)}
@@ -176,7 +176,7 @@ const Login = () => {
 									className='border-2 border-primary p-2'
 								/>
 								{errors.email && (
-									<p role='alert' className='text-[red] text-sm md:text-base'>
+									<p role='alert' className='text-[red] text-sm md:text-sm'>
 										{errors.email?.message}
 									</p>
 								)}
@@ -203,7 +203,7 @@ const Login = () => {
 									className='border-2 border-primary p-2'
 								/>
 								{errors.password && (
-									<p role='alert' className='text-[red] text-sm md:text-base'>
+									<p role='alert' className='text-[red] text-sm md:text-sm max-w-sm'>
 										{errors.password?.message}
 									</p>
 								)}
@@ -223,7 +223,7 @@ const Login = () => {
 									className='border-2 border-primary p-2'
 								/>
 								{errors.repeatpassword && (
-									<p role='alert' className='text-[red] text-sm md:text-base'>
+									<p role='alert' className='text-[red] text-sm md:text-sm'>
 										{errors.repeatpassword?.message}
 									</p>
 								)}

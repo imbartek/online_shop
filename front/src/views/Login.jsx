@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const Login = () => {
 	const [hasAccount, setHasAccount] = useState(true);
@@ -23,6 +24,20 @@ const Login = () => {
 	};
 
 	const onSubmitRegister = (values) => {
+		axios({
+			method: 'post',
+			url: '/session/register/',
+			data: {
+			  name: values.name,
+			  lastname: values.lastname,
+			  phone: values.phone,
+			  email: values.email,
+			  password: values.password
+			}
+		  }).then((response) => {
+			  console.log(response)
+		  })
+
 		console.log(values);
 	};
 

@@ -1,16 +1,26 @@
 import React, { useState } from "react";
+import axios from 'axios';
 export const Register = () => {
   const [loginName, setName] = useState('');
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [confirmPass, setConfirmPass] = useState('');
 
-  const handleSumbit = (e) => {
-    e.preventDefault()
-    console.log(loginName);
-     console.log(email);
-      console.log(pass);
-      console.log(confirmPass);
+  const handleSumbit = async (e) => {
+    e.preventDefault();
+    await axios.post('http://localhost:3001/session/register', {
+      email: email,
+      password: pass,
+      name: loginName,
+      lastname: '',
+      phone: 0
+    } )
+      .catch(err =>{
+        console.error(err)
+      })
+      .then(response => {
+        console.log(response)
+      })
     }
   return (
     <>
